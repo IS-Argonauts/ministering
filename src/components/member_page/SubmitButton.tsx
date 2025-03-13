@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRightIcon } from "./icons";
+import { ArrowRightIcon } from "../icons";
 
 interface SubmitButtonProps {
   label: string;

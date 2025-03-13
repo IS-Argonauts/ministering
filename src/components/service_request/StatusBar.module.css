@@ -1,0 +1,28 @@
+.statusBar {
+  background-color: #fff;
+  height: 50px;
+  padding-top: 21px;
+}
+
+.content {
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  display: flex;
+}
+
+.time {
+  color: #000;
+  font-size: 17px;
+}
+
+.spacer {
+  width: 124px;
+  height: 10px;
+}
+
+.indicators {
+  display: flex;
+  align-items: center;
+}

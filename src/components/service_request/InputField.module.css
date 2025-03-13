@@ -1,0 +1,38 @@
+.fieldContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sds-size-space-200);
+}
+
+.label {
+  color: #1e1e1e;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.description {
+  color: #757575;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.inputWrapper {
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  align-items: center;
+  min-width: 240px;
+  padding: 12px 16px;
+  display: flex;
+}
+
+.input {
+  color: #1e1e1e;
+  width: 100%;
+  font-size: 16px;
+  line-height: 22px;
+  border: none;
+  outline: none;
+  background: transparent;
+}

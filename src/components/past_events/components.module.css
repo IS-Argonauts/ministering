@@ -1,0 +1,137 @@
+.container {
+  min-height: screen;
+  background-color: #fff;
+  font-family: Inter;
+}
+
+.header {
+  background-color: #006d77;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  padding: 0 1rem;
+  display: flex;
+}
+
+.headerLeft {
+  align-items: center;
+  display: flex;
+}
+
+.menuButton {
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+@media (width <= 640px) {
+  .menuButton {
+    display: block;
+  }
+}
+
+.menuIcon {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.headerTitle {
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.75rem;
+}
+
+.headerRight {
+  align-items: center;
+  display: flex;
+}
+
+.userButton {
+  background-color: #fff;
+  border-radius: 9999px;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+}
+
+.userIcon {
+  color: #006d77;
+}
+
+.mainContent {
+  padding: 2rem;
+}
+
+.pageTitle {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 2rem;
+}
+
+.eventsList {
+  flex-direction: column;
+  row-gap: 2rem;
+  display: flex;
+}
+
+.eventCard {
+  align-items: flex-start;
+  gap: 1rem;
+  display: flex;
+}
+
+.profileImage {
+  border-radius: 9999px;
+  width: 3rem;
+  height: 3rem;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.eventContent {
+  flex: 1;
+}
+
+.eventHeader {
+  align-items: center;
+  gap: 0.5rem;
+  display: flex;
+}
+
+.userName {
+  font-weight: 500;
+}
+
+.eventDate {
+  color: #6b7280;
+}
+
+.eventDescription {
+  margin-top: 0.75rem;
+}
+
+.buttonWrapper {
+  justify-content: center;
+  display: flex;
+  position: fixed;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+}
+
+.addButton {
+  color: #fff;
+  background-color: #006d77;
+  border-radius: 0.375rem;
+  padding: 1px 1.5px;
+  font-weight: 500;
+}
