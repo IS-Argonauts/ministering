@@ -1,0 +1,34 @@
+.navHeader {
+  background-color: #006184;
+  height: 51px;
+  position: relative;
+}
+
+.menuButton {
+  position: absolute;
+  left: 14px;
+  top: 9px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.userButton {
+  position: absolute;
+  right: 15px;
+  top: 13px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.title {
+  color: #000;
+  padding-top: 12px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 26px;
+  font-weight: 500;
+}

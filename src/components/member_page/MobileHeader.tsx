@@ -1,5 +1,5 @@
 import React from "react";
-import { StatusBarIcons, MenuIcon, UserIcon } from "./icons";
+import { StatusBarIcons, MenuIcon, UserIcon } from "../icons";
 
 const MobileHeader: React.FC = () => {
   return (
