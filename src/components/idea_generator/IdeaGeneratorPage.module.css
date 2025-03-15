@@ -1,0 +1,118 @@
+.page {
+  width: 100%;
+  min-height: screen;
+  background-color: #fff;
+  font-family: Inter, sans-serif;
+  border: 2px solid #000;
+  margin: 0 auto;
+  max-width: 480px;
+  overflow: hidden;
+}
+
+.header {
+  width: 100%;
+  height: 138px;
+}
+
+.headerContent {
+  flex-direction: column;
+  display: flex;
+}
+
+.main {
+  width: 100%;
+  flex: 1;
+}
+
+.content {
+  display: flex;
+  margin-top: 23px;
+  width: 100%;
+  padding-left: 19px;
+  padding-right: 79px;
+  flex-direction: column;
+}
+
+.title {
+  color: #000;
+  font-family: Inter, sans-serif;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.formSection {
+  display: flex;
+  flex-direction: column;
+  gap: 43px;
+  margin-top: 105px;
+}
+
+.buttonContainer {
+  display: flex;
+  margin-top: 74px;
+  width: 261px;
+  max-width: 100%;
+  align-items: stretch;
+  gap: 20px;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  color: #f5f5f5;
+  font-weight: 500;
+  line-height: 1;
+  justify-content: space-between;
+}
+
+.generateButtons {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  position: relative;
+}
+
+.generateButton {
+  align-self: stretch;
+  border-radius: 8px;
+  padding: 12px;
+  gap: 8px;
+  overflow: hidden;
+  background-color: #006184;
+  border: none;
+  color: #f5f5f5;
+  cursor: pointer;
+  font-weight: 500;
+  z-index: 10;
+}
+
+.generateAltButton {
+  align-self: center;
+  border-radius: 8px;
+  margin-top: -46px;
+  padding: 12px;
+  gap: 8px;
+  overflow: hidden;
+  background-color: #006184;
+  border: none;
+  color: #f5f5f5;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.saveButton {
+  align-self: stretch;
+  border-radius: 8px;
+  padding: 12px;
+  gap: 8px;
+  overflow: hidden;
+  background-color: #006184;
+  border: none;
+  color: #f5f5f5;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.generateButton:hover,
+.generateAltButton:hover,
+.saveButton:hover {
+  background-color: #004d6a;
+}
