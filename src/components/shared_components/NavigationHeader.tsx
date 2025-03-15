@@ -35,7 +35,6 @@ export const NavigationHeader = () => {
           />
         </svg>
       </button>
-      <h1 className={styles.title}>Service Request</h1>
     </nav>
   );
 };

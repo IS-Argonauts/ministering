@@ -2,7 +2,7 @@
 
 import React from "react";
 import { StatusBar } from "./StatusBar";
-import { NavigationHeader } from "./NavigationHeader";
+import { NavigationHeader } from "../shared_components/NavigationHeader";
 import { ServiceRequestForm } from "./ServiceRequestForm";
 import styles from "./ServiceRequestPage.module.css";
 
