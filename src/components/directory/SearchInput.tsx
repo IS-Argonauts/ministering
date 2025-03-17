@@ -11,12 +11,12 @@ export const SearchInput: React.FC<SearchInputProps> = ({
   onChange,
 }) => {
   return (
-    <div className="relative">
+    <div className="relative w-full">
       <input
         type="text"
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        placeholder="La"
+        placeholder="Search..."
         className="px-4 py-2 w-full text-gray-900 rounded-lg bg-slate-100"
         aria-label="Search directory"
       />

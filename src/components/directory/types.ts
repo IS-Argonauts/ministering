@@ -5,8 +5,3 @@ export interface User {
   bgColor: string;
 }
 
-export interface KeyboardKey {
-  label: string;
-  type?: "letter" | "special";
-  icon?: string;
-}

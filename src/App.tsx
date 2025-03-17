@@ -1,10 +1,15 @@
 import './App.css'
+import DirectorySearch from './components/directory/DirectorySearch'
 
 function App() {
 
   return (
-    <h1>Welcome to the Ministering app!</h1>
-  )
+    <>
+      <div style={{ width: "100%", height: "100vh" }}>
+        <DirectorySearch />
+      </div>
+    </>
+  );
 }
 
 export default App
