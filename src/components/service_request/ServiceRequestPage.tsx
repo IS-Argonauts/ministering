@@ -10,10 +10,7 @@ export const ServiceRequestPage = () => {
   return (
     <div className={styles.page}>
       <div className={styles.header}>
-        <div className={styles.headerContent}>
-          <StatusBar />
-          <NavigationHeader />
-        </div>
+        <div className={styles.headerContent}></div>
       </div>
       <main className={styles.main}>
         <ServiceRequestForm />
