@@ -6,11 +6,7 @@ import ServiceRequestPage from "./components/service_request/ServiceRequestPage"
 import StatusBar from "./components/service_request/StatusBar";
 
 function App() {
-  return (
-    <>
-      <ServiceRequestPage />
-    </>
-  );
+  return <h1>Welcome to the Ministering app!</h1>;
 }
 
 export default App;
