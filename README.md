@@ -52,3 +52,10 @@ export default tseslint.config({
   },
 })
 ```
+
+
+## Installations needed
+- npm install react-icons
+- npm create vite@latest
+  - Select React, then Typescript
+- npm install

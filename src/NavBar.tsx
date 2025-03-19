@@ -1,5 +1,5 @@
 import "./App.css";
-
+import { FiHome, FiCompass, FiUsers, FiUserPlus, FiClock } from "react-icons/fi";
 function NavBar() {
 
   return (
@@ -8,11 +8,11 @@ function NavBar() {
         <input className="menu-btn" type="checkbox" id="menu-btn" />
         <label className="menu-icon" htmlFor="menu-btn"><span className="navicon"></span></label>
         <ul className="menu">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#ideagenerator">Idea Generator</a></li>
-            <li><a href="#servicerequest">Service Request</a></li>
-            <li><a href="#pastevents">Past Events</a></li>
-            <li><a href="#admin">Admin</a></li>
+            <li><a href="#home"><FiHome/> Home</a></li>
+            <li><a href="#ideagenerator"><FiCompass/> Idea Generator</a></li>
+            <li><a href="#servicerequest"><FiUsers/> Service Request</a></li>
+            <li><a href="#pastevents"><FiClock /> Past Events</a></li>
+            <li><a href="#admin"><FiUserPlus/> Admin</a></li>
         </ul>
     </header>
     </>
