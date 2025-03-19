@@ -1,7 +1,5 @@
 "use client";
-import * as React from "react";
 import styles from "./components.module.css";
-import { Header } from "./Header";
 import { EventCard } from "./EventCard";
 import { AddEventButton } from "./AddEventButton";
 
@@ -12,7 +10,6 @@ function PastEvents() {
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
         rel="stylesheet"
       />
-      <Header />
       <main className={styles.mainContent}>
         <h1 className={styles.pageTitle}>Past Events</h1>
         <section className={styles.eventsList}>
