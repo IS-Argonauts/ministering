@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import { InputField } from "./InputField";
 import styles from "./ServiceRequestForm.module.css";
 import { FaUser, FaBars } from "react-icons/fa";
