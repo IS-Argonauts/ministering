@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import "./App.css";
 
 function App() {
@@ -7,5 +8,14 @@ function App() {
     </>
   );
 }
+=======
+const App = () => {
+  
+
+  return (
+    <></>
+  );
+};
+>>>>>>> Stashed changes
 
 export default App;
