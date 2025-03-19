@@ -5,7 +5,7 @@
   text-align: center;
 } */
 
-.logo {
+/* .logo {
   height: 8em;
   padding: 1.5em;
   will-change: filter;
@@ -16,7 +16,7 @@
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
-}
+} */
 
 @keyframes logo-spin {
   from {
@@ -52,13 +52,13 @@ body {
 }
 
 a {
-  color: #000;
+  color: #ffffff;
 }
 
 /* header */
 
 .header {
-  background-color: #fff;
+  background-color: #006184;
   box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
   position: fixed;
   top: 0;
@@ -71,7 +71,7 @@ a {
   padding: 0;
   list-style: none;
   overflow: hidden;
-  background-color: #fff;
+  background-color: #006184;
 }
 
 .header li a {
@@ -113,7 +113,7 @@ a {
 }
 
 .header .menu-icon .navicon {
-  background: #333;
+  background: #ffffff;
   display: block;
   height: 2px;
   position: relative;
@@ -123,7 +123,7 @@ a {
 
 .header .menu-icon .navicon:before,
 .header .menu-icon .navicon:after {
-  background: #333;
+  background: #ffffff;
   content: '';
   display: block;
   height: 100%;
@@ -147,7 +147,7 @@ a {
 }
 
 .header .menu-btn:checked ~ .menu {
-  max-height: 240px;
+  max-height: 400px; /*NOTE: If adding extra tabs, make sure to increase the height here.*/
 }
 
 .header .menu-btn:checked ~ .menu-icon .navicon {
@@ -178,8 +178,9 @@ a {
   }
   .header .menu {
     clear: none;
-    float: right;
+    float: left;
     max-height: none;
+    background-color: #006184;
   }
   .header .menu-icon {
     display: none;
