@@ -1,10 +1,13 @@
-import './App.css'
+import "./App.css";
+import { AdminTools } from "./components/admin_site/AdminTools";
+// import AdminTools from "./components/admin_site/AdminTools";
 
 function App() {
-
   return (
-    <h1>Welcome to the Ministering app!</h1>
-  )
+    <>
+      <AdminTools />
+    </>
+  );
 }
 
-export default App
+export default App;
