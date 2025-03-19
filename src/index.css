@@ -66,3 +66,26 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* Ensure full height & remove margins */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: #f8f9fa; /* Optional: Light gray background */
+}
+
+/* Restrict app to a mobile size */
+#root {
+  max-width: 375px;  /* Typical mobile width (e.g., iPhone 12) */
+  height: 812px;  /* Mobile height (adjust if needed) */
+  margin: auto;
+  border: 1px solid #ddd; /* Optional: Gives a phone-like border */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Adds shadow for a phone effect */
+  overflow: hidden; /* Prevents scrolling outside the container */
+  display: flex;
+  flex-direction: column;
+  background-color: white; /* Ensures a clean background */
+}
