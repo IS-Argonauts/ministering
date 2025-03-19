@@ -32,10 +32,18 @@ body {
 }
 
 a {
-  color: #ffffff;
+  color: #f4f4f4;
 }
 
 /* header */
+.header a {
+  color: white;
+  text-decoration: none; /* Optional: Removes underline */
+}
+.header a:hover {
+  color: black;
+  text-decoration: none; /* Optional: Removes underline */
+}
 
 .header {
   background-color: #006184;
