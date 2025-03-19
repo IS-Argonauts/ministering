@@ -1,9 +1,13 @@
 import "./App.css";
+import NavBar from "./NavBar";
 
 function App() {
 
   return (
-    <h1>Welcome to the Ministering app!</h1>
+    <>
+        <NavBar/>
+        <h1>Welcome to the Ministering app!</h1>
+    </>
   )
 }
 
