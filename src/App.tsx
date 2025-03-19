@@ -20,5 +20,14 @@ const App: React.FC = () => {
     </Router>
   );
 };
+import "./App.css";
+
+function App() {
+  return (
+    <>
+      
+    </>
+  );
+}
 
 export default App;
