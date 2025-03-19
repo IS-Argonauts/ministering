@@ -1,14 +1,3 @@
-<<<<<<< Updated upstream
-import "./App.css";
-
-function App() {
-  return (
-    <>
-      
-    </>
-  );
-}
-=======
 const App = () => {
   
 
@@ -16,6 +5,5 @@ const App = () => {
     <></>
   );
 };
->>>>>>> Stashed changes
 
 export default App;
