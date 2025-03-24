@@ -38,3 +38,5 @@ export const NavigationHeader = () => {
     </nav>
   );
 };
+
+export default NavigationHeader;

@@ -9,7 +9,7 @@ interface Person {
 interface SectionProps {
   title: string;
   people: Person[];
-  titleSize?: "normal" | "large";
+  titleSize?: "normal" | "small";
 }
 
 export const Section: React.FC<SectionProps> = ({
@@ -18,7 +18,7 @@ export const Section: React.FC<SectionProps> = ({
   titleSize = "normal",
 }) => {
   const titleClass =
-    titleSize === "large"
+    titleSize === "small"
       ? "text-xl font-medium text-black"
       : "text-base font-medium text-stone-900";
 

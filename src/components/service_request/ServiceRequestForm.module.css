@@ -63,3 +63,77 @@
 .submitButton:hover {
   background-color: #004d6a;
 }
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #005a78;
+  color: white;
+  padding: 15px;
+  border-radius: 5px 5px 0 0;
+}
+
+.menuIcon,
+.userIcon {
+  font-size: 20px;
+}
+
+.title {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.checkboxContainer {
+  margin-bottom: 15px;
+}
+
+.checkboxWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.checkboxInput {
+  margin-right: 10px;
+}
+
+.checkboxLabel {
+  font-size: 14px;
+}
+
+.submitContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.submitButton {
+  background-color: #005a78;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submitButton:hover {
+  background-color: #00405a;
+}

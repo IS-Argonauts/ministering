@@ -55,3 +55,5 @@ export const StatusBar = () => {
     </header>
   );
 };
+
+export default StatusBar;
