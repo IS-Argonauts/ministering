@@ -175,4 +175,32 @@ a {
   }
 }
 
+
+/* Position the profile icon */
+.profile-icon {
+  margin-right: 20px;
+  color: white; /* Make the icon color white to match the navbar */
+  font-size: 1.5em; /* Adjust size as desired */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Make it float to the right */
+.header {
+  display: flex;
+  justify-content: space-between; /* Space between menu and profile icon */
+  align-items: center;
+}
+
+/* Optional hover effect for profile icon */
+.profile-icon:hover {
+  color: #f4f4f4;
+}
+
+
 /* end navigation styling */
+
+
+
+
