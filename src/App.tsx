@@ -22,7 +22,6 @@ function App() {
         <Route path="/PastEvents" element={<PastEvents/>} />
         
       </Routes>
-        <h1>Welcome to the Ministering app!</h1>
     </>
   )
 }
