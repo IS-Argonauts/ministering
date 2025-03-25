@@ -8,6 +8,8 @@ import IdeaGenerator from "./pages/IdeaGenerator";
 import Admin from "./pages/Admin";
 import PastEvents from "./pages/PastEvents";
 import ServiceRequest from "./pages/ServiceRequest";
+import Directory from "./pages/Directory";
+
 
 function App() {
 
@@ -20,9 +22,8 @@ function App() {
         <Route path="/Admin" element={<Admin/>} />
         <Route path="/ServiceRequest" element={<ServiceRequest/>} />
         <Route path="/PastEvents" element={<PastEvents/>} />
-        
+        <Route path="/Directory" element={<Directory />} />  
       </Routes>
-        <h1>Welcome to the Ministering app!</h1>
     </>
   )
 }
