@@ -183,7 +183,67 @@
   transition: background-color 0.2s ease-in-out;
 }
 
-/* Button hover effect */
+/* Hover state (slightly darker blue) */
 .addButton:hover {
-  background-color: #005c66;
+  background-color: #00526e;
+}
+
+/* Active (clicked) state (even darker blue) */
+.addButton:active {
+  background-color: #003f54;
+}
+
+/* Optional: remove green focus ring from some browsers */
+.addButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 97, 132, 0.4);
+}
+
+.formContainer {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  border: 1px solid #ccc;
+  resize: vertical;
+  font-family: "Inter", sans-serif;
+}
+
+.submitButton {
+  background-color: #006184;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submitButton:hover {
+  background-color: #004f5a;
+}
+
+.eventEntry {
+  margin-bottom: 0.75rem;
+}
+
+.input {
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  border: 1px solid #ccc;
+  font-family: "Inter", sans-serif;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full viewport height */
+  background-color: #fff;
+  font-family: "Inter", sans-serif;
 }

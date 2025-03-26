@@ -1,5 +1,5 @@
 import "./App.css";
-import { FiHome, FiCompass, FiUsers, FiUserPlus, FiClock } from "react-icons/fi";
+import { FiHome, FiCompass, FiUsers, FiUserPlus, FiClock, FiUser } from "react-icons/fi";
 function NavBar() {
 
   return (
@@ -14,6 +14,10 @@ function NavBar() {
             <li><a href="/PastEvents"><FiClock /> Past Events</a></li>
             <li><a href="/Admin"><FiUserPlus/> Admin</a></li>
         </ul>
+        <div className="menu profile-icon">
+          <FiUser/>
+        </div>
+        {/* some <FiUser/> here */}
     </header>
     </>
   )
