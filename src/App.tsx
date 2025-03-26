@@ -1,4 +1,3 @@
-
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import { AdminTools } from "./components/admin_site/AdminTools";
@@ -10,22 +9,18 @@ import PastEvents from "./pages/PastEvents";
 import ServiceRequest from "./pages/ServiceRequest";
 
 function App() {
-
   return (
-    <> 
-      <NavBar/>
+    <>
+      <NavBar />
       <Routes>
-        <Route path="/Home" element={<Home/>} />
-        <Route path="/IdeaGenerator" element={<IdeaGenerator/>} />
-        <Route path="/Admin" element={<Admin/>} />
-        <Route path="/ServiceRequest" element={<ServiceRequest/>} />
-        <Route path="/PastEvents" element={<PastEvents/>} />
-        
+        <Route path="/Home" element={<Home />} />
+        <Route path="/IdeaGenerator" element={<IdeaGenerator />} />
+        <Route path="/Admin" element={<Admin />} />
+        <Route path="/ServiceRequest" element={<ServiceRequest />} />
+        <Route path="/PastEvents" element={<PastEvents />} />
       </Routes>
-        <h1>Welcome to the Ministering app!</h1>
     </>
-  )
+  );
 }
-
 
 export default App;
