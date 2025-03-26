@@ -1,0 +1,29 @@
+body {
+  padding-top: 660px; /* Pushes the content down, preventing overlap with the header */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns */
+  gap: 10px; /* Space between items */
+  padding: 10px;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column; /* Stack the image and name vertically */
+  align-items: center; /* Center align the items */
+}
+
+.image {
+  width: 100%; /* Ensure the image scales properly */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 200px; /* Limit the image width to prevent it from becoming too large */
+}
+
+.name {
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+  margin-top: 8px;
+}
