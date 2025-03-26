@@ -1,80 +1,75 @@
 import React from "react";
-import { Section } from "./Section";
-
-const companionshipPeople = [
-  {
-    imageUrl: "https://via.placeholder.com/86x69",
-    name: "Person 1",
-  },
-  {
-    imageUrl: "https://via.placeholder.com/86x69",
-    name: "Person 2",
-  },
-  {
-    imageUrl: "https://via.placeholder.com/86x69",
-    name: "Person 3",
-  },
-];
-
-const assignmentPeople = [
-  {
-    imageUrl: "https://via.placeholder.com/86x69",
-    name: "Person A",
-  },
-  {
-    imageUrl: "https://via.placeholder.com/86x69",
-    name: "Person B",
-  },
-  {
-    imageUrl: "https://via.placeholder.com/86x69",
-    name: "Person C",
-  },
-];
-
-export const AdminTools: React.FC = () => {
+import "./AdminTools.css";
+import Bryli from "../../assets/RandomLady.jpg";
+import Dieter from "../../assets/RandomMan.jpg";
+import Jaden from "../../assets/Jaden.jpg";
+function AdminTools() {
   return (
-    <div className="p-6 w-full max-w-2xl mx-auto">
-      {/* Main Heading */}
-      <h1 className="text-sm font-medium text-black text-left mb-4">
-        Admin Tools
-      </h1>
-
-      {/* Companionship Section */}
-      <div className="mb-6">
-        <h2 className="text-base font-medium text-left mb-3">Companionship</h2>
-        <div className="flex justify-start gap-5">
-          {companionshipPeople.map((person, index) => (
-            <div key={index} className="w-[86px] text-center">
-              <img
-                src={person.imageUrl}
-                alt={person.name}
-                className="w-[86px] h-[69px] rounded-[2px] object-cover mb-1"
-              />
-              <p className="text-xs">{person.name}</p>
-            </div>
-          ))}
+    <>
+      <h2>Companionship</h2>
+      <div className="grid-container">
+        <div className="grid-item">
+          <img src={Bryli} alt="Bryli" className="image" />
+          <p className="name">Bryli</p> {/* Name under the image */}
+        </div>
+        <div className="grid-item">
+          <img src={Dieter} alt="Dieter" className="image" />
+          <p className="name">Dieter</p> {/* Name under the image */}
+        </div>
+        <div className="grid-item">
+          <img src={Jaden} alt="Jaden" className="image" />
+          <p className="name">Jaden</p> {/* Name under the image */}
         </div>
       </div>
 
-      {/* Assignment Section */}
-      <div className="mb-6">
-        <h2 className="text-base font-medium text-left mb-3">Assignment</h2>
-        <div className="flex justify-start gap-5">
-          {assignmentPeople.map((person, index) => (
-            <div key={index} className="w-[86px] text-center">
-              <img
-                src={person.imageUrl}
-                alt={person.name}
-                className="w-[86px] h-[69px] rounded-[2px] object-cover mb-1"
-              />
-              <p className="text-xs">{person.name}</p>
-            </div>
-          ))}
+      <h2>Assignment</h2>
+      <div className="grid-container">
+        <div className="grid-item">
+          <img src={Bryli} alt="Bryli" className="image" />
+          <p className="name">Bryli</p> {/* Name under the image */}
+        </div>
+        <div className="grid-item">
+          <img src={Dieter} alt="Dieter" className="image" />
+          <p className="name">Dieter</p> {/* Name under the image */}
+        </div>
+        <div className="grid-item">
+          <img src={Jaden} alt="Jaden" className="image" />
+          <p className="name">Jaden</p> {/* Name under the image */}
+        </div>
+      </div>
+      <h2>Companionship</h2>
+      <div className="grid-container">
+        <div className="grid-item">
+          <img src={Bryli} alt="Bryli" className="image" />
+          <p className="name">Bryli</p> {/* Name under the image */}
+        </div>
+        <div className="grid-item">
+          <img src={Dieter} alt="Dieter" className="image" />
+          <p className="name">Dieter</p> {/* Name under the image */}
+        </div>
+        <div className="grid-item">
+          <img src={Jaden} alt="Jaden" className="image" />
+          <p className="name">Jaden</p> {/* Name under the image */}
         </div>
       </div>
 
-      {/* Thin Grey Line */}
-      <hr className="border-t border-gray-300 w-full" />
-    </div>
+      <h2>Assignment</h2>
+      <div className="grid-container">
+        <div className="grid-item">
+          <img src={Bryli} alt="Bryli" className="image" />
+          <p className="name">Bryli</p> {/* Name under the image */}
+        </div>
+        <div className="grid-item">
+          <img src={Dieter} alt="Dieter" className="image" />
+          <p className="name">Dieter</p> {/* Name under the image */}
+        </div>
+        <div className="grid-item">
+          <img src={Jaden} alt="Jaden" className="image" />
+          <p className="name">Jaden</p> {/* Name under the image */}
+        </div>
+      </div>
+    </>
   );
-};
+}
+
+export default AdminTools;

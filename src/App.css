@@ -175,4 +175,18 @@ a {
   }
 }
 
+
+/* Position the profile icon */
+.profile-icon {
+  position: absolute;
+  top: 7px;
+  right: 20px;
+  color: white; /* Keep it white to match the navbar */
+  font-size: 1.5em;
+  vertical-align: middle; /* Ensure alignment with the hamburger menu */
+}
 /* end navigation styling */
+
+
+
+
