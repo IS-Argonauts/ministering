@@ -1,14 +1,29 @@
+body {
+  padding-top: 120px; /* Pushes the content down, preventing overlap with the header */
+}
+
 .grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three columns */
-    gap: 10px; /* Space between images */
-    padding: 10px; /* Add padding around the container */
-  }
-  
-  .grid-item {
-    width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    border: 2px solid #ccc; /* Optional: Add a border around the images */
-    border-radius: 10px; /* Optional: Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for aesthetics */
-  }
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns */
+  gap: 10px; /* Space between items */
+  padding: 10px;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column; /* Stack the image and name vertically */
+  align-items: center; /* Center align the items */
+}
+
+.image {
+  width: 100%; /* Ensure the image scales properly */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 200px; /* Limit the image width to prevent it from becoming too large */
+}
+
+.name {
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+  margin-top: 8px;
+}
