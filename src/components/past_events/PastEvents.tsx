@@ -1,7 +1,6 @@
 "use client";
 import styles from "./components.module.css";
 import { EventCard } from "./EventCard";
-import { AddEventButton } from "./AddEventButton";
 
 function PastEvents() {
   return (
@@ -12,21 +11,37 @@ function PastEvents() {
       />
       <main className={styles.mainContent}>
         <h1 className={styles.pageTitle}>Past Events</h1>
+
         <section className={styles.eventsList}>
           <EventCard
-            name="Jane John"
-            date="1/27/25"
-            description="We helped her clean out her garage. And gave her husband a blessing."
-            imageUrl="https://placehold.co/100x100/83A5A7/83A5A7"
+            name="Keith Carney"
+            imageUrl="src/images/stockphoto2.jpg"
+            events={[
+              {
+                date: "3/27/25",
+                description:
+                  "We helped him clean out his garage. And gave his wife a blessing.",
+              },
+            ]}
           />
+
           <EventCard
-            name="Jane John"
-            date="1/27/25"
-            description="We helped her clean out her garage. And gave her husband a blessing."
-            imageUrl="https://placehold.co/100x100/83A5A7/83A5A7"
+            name="Jane Ludwig"
+            imageUrl="src/images/stockPhoto1.jpg"
+            events={[
+              {
+                date: "1/27/25",
+                description:
+                  "Brought her brownies and a kind note. She opened up to us about how life is crazy for her right now.",
+              },
+              {
+                date: "2/14/25",
+                description:
+                  "Dropped off a Valentine's card and flowers for her and her daughter.",
+              },
+            ]}
           />
         </section>
-        <AddEventButton />
       </main>
     </div>
   );
