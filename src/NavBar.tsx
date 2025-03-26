@@ -14,7 +14,7 @@ function NavBar() {
             <li><a href="/PastEvents"><FiClock /> Past Events</a></li>
             <li><a href="/Admin"><FiUserPlus/> Admin</a></li>
         </ul>
-        <div className="menu, profile-icon">
+        <div className="menu profile-icon">
           <FiUser/>
         </div>
         {/* some <FiUser/> here */}
