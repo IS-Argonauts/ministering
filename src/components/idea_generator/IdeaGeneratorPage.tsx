@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import styles from "./IdeaGeneratorPage.module.css";
+import { useNavigate } from "react-router-dom";
 
 const ideas = [
   {
@@ -49,6 +50,7 @@ const ideas = [
 const IdeaGeneratorPage: React.FC = () => {
   const [currentIdea, setCurrentIdea] = useState(ideas[0]);
   const [isSaved, setIsSaved] = useState(false);
+  const navigate = useNavigate(); // Declare navigate hook
 
   const generateNewIdea = () => {
     const randomIndex = Math.floor(Math.random() * ideas.length);
@@ -59,7 +61,10 @@ const IdeaGeneratorPage: React.FC = () => {
     setIsSaved(true);
     setTimeout(() => {
       setIsSaved(false);
-    }, 2000); // Flash green for 2 seconds
+    }, 1000); // Flash green for 1 second
+
+    // Navigate to the Saved Ideas page after saving
+    navigate("/SavedIdeas");
   };
 
   return (
