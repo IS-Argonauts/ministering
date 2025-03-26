@@ -7,6 +7,7 @@ import IdeaGenerator from "./pages/IdeaGenerator";
 import Admin from "./pages/Admin";
 import PastEvents from "./pages/PastEvents";
 import ServiceRequest from "./pages/ServiceRequest";
+import Directory from "./pages/Directory";
 import SavedIdeasPage from "./pages/SavedIdeasPage";
 import { useState } from "react";
 
@@ -25,6 +26,8 @@ function App() {
         <Route path="/ServiceRequest" element={<ServiceRequest />} />
         <Route path="/PastEvents" element={<PastEvents />} />
         <Route path="/SavedIdeas" element={<SavedIdeasPage />} />
+        <Route path="/Directory" element={<Directory />} />
+
       </Routes>
     </>
   );
