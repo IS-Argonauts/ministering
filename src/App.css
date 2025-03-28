@@ -179,13 +179,38 @@ a {
 /* Position the profile icon */
 .profile-icon {
   position: absolute;
-  top: 7px;
-  right: 20px;
+  top: 14px;
+  right: 12px;
   color: white; /* Keep it white to match the navbar */
   font-size: 1.5em;
   vertical-align: middle; /* Ensure alignment with the hamburger menu */
 }
 /* end navigation styling */
+
+.logout-button {
+  background-color: #006184; /* Match navbar background color */
+  color: white; /* Text color same as the navbar */
+  border: none;
+  padding: 0px 0px;
+  margin-left: 20px;
+  font-size: 1em;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+  display: inline-block; /* Aligns with other menu items */
+  position: relative; /* Ensures you can adjust its position */
+  top: -3px; /* Adjust this value to fine-tune the vertical positioning */
+  font-size: 20px;
+}
+
+.logout-button:hover {
+  background-color: #f4f4f4;
+  color: #006184;
+}
+
+.logout-button:focus {
+  outline: none;
+}
 
 
 
