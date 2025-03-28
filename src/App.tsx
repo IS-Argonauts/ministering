@@ -40,7 +40,7 @@ function App() {
 
       console.log("Session Duration:", sessionDuration);
 
-      if (sessionDuration > 10 * 60 * 1000) {
+      if (sessionDuration > 60 * 60 * 1000) {
         console.log("Session expired, logging out...");
         logout();
       } else {
