@@ -1,14 +1,14 @@
 import { useState } from "react";
-import IdeaGeneratorPage from "../components/idea_generator/IdeaGeneratorPage";
+import SavedIdeas from "../components/idea_generator/SavedIdeas";
 import NavBar from "../NavBar";
 
-export default function IdeaGenerator() {
+export default function SavedIdeasPage() {
   const [isAuthenticated, setIsAuthenticated] = useState(true);
 
   return (
     <div>
       <NavBar setIsAuthenticated={setIsAuthenticated} />
-      <IdeaGeneratorPage />
+      <SavedIdeas />
     </div>
   );
 }
