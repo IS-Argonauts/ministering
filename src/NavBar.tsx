@@ -1,13 +1,7 @@
-import "./App.css";
-import {
-  FiHome,
-  FiCompass,
-  FiUsers,
-  FiUserPlus,
-  FiClock,
-  FiUser,
-} from "react-icons/fi";
+import React, { useState } from "react";
+import { FiUser } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
+import "./App.css"; // Ensure your CSS file is imported
 
 interface NavBarProps {
   setIsAuthenticated: (value: boolean) => void;
@@ -15,21 +9,30 @@ interface NavBarProps {
 
 function NavBar({ setIsAuthenticated }: NavBarProps) {
   const navigate = useNavigate();
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false); // Track the state of the menu
 
   const handleLogout = () => {
-    localStorage.removeItem("isAuthenticated"); // Clear localStorage
-    localStorage.removeItem("loginTime"); // Clear login time
-    setIsAuthenticated(false); // Update state
-    navigate("/"); // Redirect to login page
+    localStorage.removeItem("isAuthenticated");
+    localStorage.removeItem("loginTime");
+    setIsAuthenticated(false);
+    navigate("/");
   };
 
   const handleNavigation = (path: string) => {
     navigate(path);
+    setMenuOpen(false); // Close the menu after navigation
   };
 
   return (
     <header className="header">
-      <input className="menu-btn" type="checkbox" id="menu-btn" />
+      <input
+        className="menu-btn"
+        type="checkbox"
+        id="menu-btn"
+        checked={menuOpen} // This controls the state of the checkbox
+        onChange={() => setMenuOpen(!menuOpen)} // Toggle menu state on checkbox change
+      />
       <label className="menu-icon" htmlFor="menu-btn">
         <span className="navicon"></span>
       </label>
@@ -37,33 +40,49 @@ function NavBar({ setIsAuthenticated }: NavBarProps) {
       <ul className="menu">
         <li>
           <a href="#" onClick={() => handleNavigation("/Home")}>
-            <FiHome /> Home
+            Home
           </a>
         </li>
         <li>
           <a href="#" onClick={() => handleNavigation("/IdeaGenerator")}>
-            <FiCompass /> Idea Generator
+            Idea Generator
           </a>
         </li>
         <li>
           <a href="#" onClick={() => handleNavigation("/ServiceRequest")}>
-            <FiUsers /> Service Request
+            Service Request
           </a>
         </li>
         <li>
           <a href="#" onClick={() => handleNavigation("/PastEvents")}>
-            <FiClock /> Past Events
+            Past Events
           </a>
         </li>
         <li>
           <a href="#" onClick={() => handleNavigation("/Admin")}>
-            <FiUserPlus /> Admin
+            Admin
           </a>
         </li>
       </ul>
 
-      <div className="menu profile-icon">
+      {/* Profile Icon and Dropdown */}
+      <div
+        className="profile-icon"
+        onClick={() => setDropdownOpen(!isDropdownOpen)}
+      >
         <FiUser />
+      </div>
+
+      <div className={`profile-dropdown ${isDropdownOpen ? "active" : ""}`}>
+        <h4>Profile</h4>
+        <label>
+          Make Phone Number Public
+          <input type="checkbox" />
+        </label>
+        <label>
+          Make Personality Profile Public
+          <input type="checkbox" />
+        </label>
         <button onClick={handleLogout} className="logout-button">
           Logout
         </button>
