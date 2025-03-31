@@ -11,11 +11,6 @@ export const ServiceRequestForm = () => {
   return (
     <div className={styles.container}>
       {/* Header Section */}
-      <header className={styles.header}>
-        <FaBars className={styles.menuIcon} />
-        <h2 className={styles.title}>Service Request</h2>
-        <FaUser className={styles.userIcon} />
-      </header>
 
       {/* Form Section */}
       <form className={styles.form}>

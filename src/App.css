@@ -19,10 +19,7 @@
 
 .read-the-docs {
   color: #888;
-} 
-
-
-
+}
 
 /* Navbar styling */
 body {
@@ -47,7 +44,7 @@ a {
 
 .header {
   background-color: #006184;
-  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
   width: 100%;
@@ -87,7 +84,7 @@ a {
 .header .menu {
   clear: both;
   max-height: 0;
-  transition: max-height .2s ease-out;
+  transition: max-height 0.2s ease-out;
 }
 
 /* menu icon */
@@ -105,28 +102,28 @@ a {
   display: block;
   height: 2px;
   position: relative;
-  transition: background .2s ease-out;
+  transition: background 0.2s ease-out;
   width: 18px;
 }
 
 .header .menu-icon .navicon:before,
 .header .menu-icon .navicon:after {
   background: #ffffff;
-  content: '';
+  content: "";
   display: block;
   height: 100%;
   position: absolute;
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
   width: 100%;
 }
 
- .header .menu-icon .navicon:before {
+.header .menu-icon .navicon:before {
   top: 4px;
 }
 
 .header .menu-icon .navicon:after {
   top: -4px;
-} 
+}
 
 /* menu btn */
 
@@ -175,18 +172,100 @@ a {
   }
 }
 
-
 /* Position the profile icon */
 .profile-icon {
   position: absolute;
-  top: 7px;
-  right: 20px;
+  top: 10px;
+  right: 12px;
   color: white; /* Keep it white to match the navbar */
   font-size: 1.5em;
   vertical-align: middle; /* Ensure alignment with the hamburger menu */
 }
+
+/* Adjust Logout Button */
+.logout-button {
+  background-color: #006184; /* Match navbar */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 1em;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+  display: block; /* Ensures it takes full width */
+  margin: 10px auto; /* Centers it horizontally */
+  width: fit-content; /* Makes width adjust to content */
+}
+
+.logout-button:hover {
+  background-color: #f4f4f4;
+  color: #006184;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Profile Dropdown Menu */
+.profile-dropdown {
+  position: fixed;
+  top: 50px; /* Adjust based on navbar height */
+  right: 12px;
+  background: #dcdcdc; /* Medium grey background */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+  border-radius: 10px;
+  width: 250px; /* Adjust width as needed */
+  display: none; /* Initially hidden */
+  z-index: 1000;
+  padding: 10px;
+}
+
+.profile-dropdown.active {
+  display: block; /* Show when active */
+}
+
+.profile-dropdown h4 {
+  margin: 0;
+  padding: 10px;
+  font-size: 16px;
+  border-bottom: 1px solid #ddd;
+}
+
+.profile-dropdown label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.profile-dropdown input[type="checkbox"] {
+  appearance: none;
+  width: 40px;
+  height: 20px;
+  background: #ccc;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.profile-dropdown input[type="checkbox"]:checked {
+  background: #006184;
+}
+
+.profile-dropdown input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: white;
+  border-radius: 50%;
+  top: 1px;
+  left: 2px;
+  transition: transform 0.3s;
+}
+
+.profile-dropdown input[type="checkbox"]:checked::before {
+  transform: translateX(20px);
+}
+
 /* end navigation styling */
-
-
-
-

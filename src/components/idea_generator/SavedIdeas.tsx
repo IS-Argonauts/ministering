@@ -4,10 +4,16 @@ import { FaBookmark } from "react-icons/fa";
 
 // Sample initial ideas
 const initialIdeas = [
-  "Bring brownies by on her birthday",
-  "Walk the dog while she is working",
-  "Bring dinner by next Wednesday",
-  "Send a thank-you card for helping",
+  "Invite them to grab lunch or a treat and catch up.",
+  "Send them a message asking how their week is going.",
+  "Pray specifically for their needs and let them know you're thinking of them.",
+  "Offer to help with something—whether it's moving, babysitting, or running an errand.",
+  "Share a scripture or uplifting quote that might encourage them.",
+  "Write a short note or letter of appreciation and drop it off at their home.",
+  "Invite them to a church activity or a wholesome social event.",
+  "Ask if there's anything specific they need prayers for.",
+  "Send a small, thoughtful gift (cookies, a book, or something related to their interests).",
+  "Simply call them and have a genuine conversation about life.",
 ];
 
 const SavedIdeas: React.FC = () => {
@@ -36,6 +42,7 @@ const SavedIdeas: React.FC = () => {
 
   // Function to handle the addition of a new idea
   const handleAddIdea = () => {
+    console.log("Adding idea:", newIdea); // Debugging line
     if (newIdea.trim() !== "") {
       const updatedIdeas = [...savedIdeasData, newIdea];
       setSavedIdeasData(updatedIdeas);
@@ -89,7 +96,7 @@ const SavedIdeas: React.FC = () => {
                 placeholder="Enter your idea"
               />
               <div className={styles.modalActions}>
-                <button onClick={handleAddIdea} className={styles.addButton}>
+                <button onClick={handleAddIdea} className={styles.saveButton}>
                   Save Idea
                 </button>
                 <button
