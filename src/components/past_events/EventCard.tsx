@@ -20,14 +20,16 @@ export const EventCard: React.FC<EventCardProps> = ({
   const [showForm, setShowForm] = useState(false);
   const [newDescription, setNewDescription] = useState("");
   const [newDate, setNewDate] = useState("");
+  const [eventList, setEventList] = useState<Event[]>(events); // ✅ new state for local RAM updates
 
   const handleSubmit = () => {
-    alert(
-      `New event for ${name.split(" ")[0]}:\n${newDate} - ${newDescription}`
-    );
-    setNewDate("");
-    setNewDescription("");
-    setShowForm(false);
+    if (newDate.trim() !== "" && newDescription.trim() !== "") {
+      const newEvent = { date: newDate, description: newDescription };
+      setEventList([...eventList, newEvent]); // ✅ add to state
+      setNewDate("");
+      setNewDescription("");
+      setShowForm(false);
+    }
   };
 
   return (
@@ -44,8 +46,7 @@ export const EventCard: React.FC<EventCardProps> = ({
           <h3 className={styles.userName}>{name}</h3>
         </div>
 
-        {/* Loop through event history */}
-        {events.map((event, index) => (
+        {eventList.map((event, index) => (
           <div key={index} className={styles.eventEntry}>
             <time className={styles.eventDate}>{event.date}</time>
             <p className={styles.eventDescription}>{event.description}</p>
