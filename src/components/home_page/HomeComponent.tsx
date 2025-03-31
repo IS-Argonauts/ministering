@@ -1,18 +1,31 @@
 "use client";
+import MinistereeCard from "../ministeree_card/MinistereeCard";
+import MinisteringCompanionCard from "../ministering_companion_card/MinisteringCompanionCard";
 import styles from "./components.module.css";
 
 const HomeComponent = () => {
+
+  const user = {
+    firstName: "Larry",
+    lastName: "Smith",
+    phone: "801-555-1234",
+    address: "123 Main St, Provo, UT",
+    birthday: "January 1, 1990",
+    imageUrl: "src/images/stockPhoto1.jpg",
+  };
+
+
   return (
     <div className={styles.container}>
       <main className={styles.mainContent}>
-        <h1 className={styles.pageTitle}>Welcome</h1>
+        <h1 className={styles.pageTitle}>Welcome, { user.firstName }</h1>
 
         {/* Reminders Section */}
         <section className={styles.reminders}>
           <h2>Reminders</h2>
           <ul>
             <li>
-              Jane Ludwig has a Birthday next week. Click <a href="#">here</a>{" "}
+              Jane Ludwig has a Birthday next week. Click <a href="/IdeaGenerator">here</a>{" "}
               for ideas.
             </li>
             <li>You haven’t visited Keith in 12 days</li>
@@ -21,50 +34,38 @@ const HomeComponent = () => {
 
         {/* Ministering Companion */}
         <section className={styles.assignmentSection}>
-          <h2>Ministering Companion</h2>
+          <h2 style={{ textAlign: "center" }}>Ministering Companion</h2>
           <div className={styles.cardScroll}>
-            <div className={styles.card}>
-              <img src="src/images/steve.jpg" alt="Steve Harvey" />
-              <h3>Steve Harvey</h3>
-              <p>Contact: 801-000-0000</p>
-              <p>Address: W310 TNRB, Provo, UT</p>
-              <p>Birthday: January 17, 1957</p>
-            </div>
+            <MinisteringCompanionCard
+              name="Steve Harvey"
+              phone="801-000-0000"
+              address="W310 TNRB, Provo, UT"
+              birthday="January 17, 1957"
+              imageUrl="src\assets\LiftUpIcon.png"
+            />
           </div>
         </section>
 
         {/* Ministerees */}
         <section className={styles.assignmentSection}>
-          <h2>Ministerees</h2>
-          <div className={styles.cardScroll}>
-            <div className={styles.card}>
-              <img src="src/images/stockphoto2.jpg" alt="Keith Carney" />
-              <h3>Keith Carney</h3>
-              <p>Contact: 801-555-1111</p>
-              <p>Address: 101 Campus Dr, Provo, UT</p>
-              <p>Birthday: March 27, 1995</p>
+          <h2 style={{ textAlign: "center" }}>Ministerees</h2>
+            <div className={styles.cardScroll}>
+              <MinistereeCard
+                name="Keith Carney"
+                phone="801-555-1111"
+                address="101 Campus Dr, Provo, UT"
+                birthday="March 27, 1995"
+                imageUrl="src/images/stockphoto2.jpg"
+              />
+              <MinistereeCard
+                name="Jane Ludwig"
+                phone="801-555-2222"
+                address="102 Campus Dr, Provo, UT"
+                birthday="January 27, 1995"
+                imageUrl="src/images/stockPhoto1.jpg"
+              />
             </div>
-
-            <div className={styles.card}>
-              <img src="src/images/stockPhoto1.jpg" alt="Jane Ludwig" />
-              <h3>Jane Ludwig</h3>
-              <p>Contact: 801-555-2222</p>
-              <p>Address: 102 Campus Dr, Provo, UT</p>
-              <p>Birthday: January 27, 1995</p>
-            </div>
-          </div>
         </section>
-
-        {/* Action Buttons */}
-        <div className={styles.actions}>
-          <div className={styles.actionCard}>
-            <p>Recently visited this member? Log your progress now.</p>
-            <button className={styles.iconButton}>📝</button>
-          </div>
-          <div className={styles.actionCard}>
-            <p>Know someone in need? Submit a Ward Service Request.</p>
-          </div>
-        </div>
       </main>
     </div>
   );
