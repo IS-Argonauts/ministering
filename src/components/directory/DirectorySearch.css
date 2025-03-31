@@ -1,0 +1,116 @@
+/* DirectorySearch.css */
+.container {
+  padding: 20px;
+  font-family: "Inter", sans-serif;
+  width: 90%;
+  max-width: 1200px;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 26px;
+  color: #000;
+  margin-bottom: 10px;
+  text-align: left;
+  padding: 0 15px;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #006184;
+  border-radius: 20px;
+  padding: 5px;
+  margin-bottom: 20px;
+  width: 100%; /* Make sure the search bar spans the full width */
+  max-width: 100%;
+}
+
+.input {
+  width: 100%; /* Ensure the input takes up full width of the parent container */
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 20px;
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+.magnifier {
+  margin-left: 10px;
+  font-size: 20px;
+  color: #6a6a6a;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+    width: 95%;
+  }
+
+  .searchBar {
+    padding: 8px;
+  }
+
+  .input {
+    padding: 8px;
+    font-size: 14px; /* Reduce font size on small screens */
+  }
+
+  .magnifier {
+    font-size: 18px; /* Smaller icon on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 5px;
+    width: 100%;
+  }
+
+  .input {
+    font-size: 12px; /* Further reduce font size */
+  }
+
+  .magnifier {
+    font-size: 16px; /* Adjust magnifier size */
+  }
+}
+
+/* New styles for scrollable images */
+.resultsContainer {
+  display: flex;
+  flex-direction: column; /* Change to column layout */
+  gap: 20px;  /* Add space between the results */
+  max-height: 600px;  /* Set a max height for the scrollable area */
+  overflow-y: scroll;  /* Enable vertical scrolling */
+  padding-right: 10px; /* Prevent scrollbar from overlapping content */
+  margin-bottom: 20px; /* Optional: Add a little margin at the bottom */
+}
+
+/* Link styles */
+.no-link-style {
+  text-decoration: none;  /* Remove underline */
+  color: inherit;         /* Inherit color from parent */
+  cursor: pointer;        /* Change cursor to pointer on hover */
+  display: block;
+  margin-bottom: 0; /* Remove extra space between items */
+}
+
+.no-link-style:hover {
+  /* Optional: add a hover effect if you want */
+  color: #006184; /* Example: Change color on hover */
+}
+
+
