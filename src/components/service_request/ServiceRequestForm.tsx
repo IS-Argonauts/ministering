@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { InputField } from "./InputField";
 import styles from "./ServiceRequestForm.module.css";
-import { FaUser, FaBars } from "react-icons/fa";
 
 export const ServiceRequestForm = () => {
   const [isCoordinationRequired, setIsCoordinationRequired] = useState(false);
@@ -11,10 +10,8 @@ export const ServiceRequestForm = () => {
   return (
     <div className={styles.container}>
       {/* Header Section */}
-      <header className={styles.header}>
-        <FaBars className={styles.menuIcon} />
-        <h2 className={styles.title}>Service Request</h2>
-        <FaUser className={styles.userIcon} />
+      <header>
+        <h2>Service Request</h2>
       </header>
 
       {/* Form Section */}
