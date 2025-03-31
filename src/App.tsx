@@ -10,6 +10,7 @@ import ServiceRequest from "./pages/ServiceRequest";
 import Directory from "./pages/Directory";
 import SavedIdeasPage from "./pages/SavedIdeasPage";
 import Login from "./pages/Login";
+import Submit from "./components/service_request/submit/Submit";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean | null>(null);
@@ -75,6 +76,7 @@ function App() {
             <Route path="/ServiceRequest" element={<ServiceRequest />} />
             <Route path="/PastEvents" element={<PastEvents />} />
             <Route path="/SavedIdeas" element={<SavedIdeasPage />} />
+            <Route path="/submit" element={<Submit />} />
             <Route path="/Directory" element={<Directory />} />
           </>
         )}
