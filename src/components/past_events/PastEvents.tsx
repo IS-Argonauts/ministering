@@ -10,7 +10,7 @@ function PastEvents() {
         rel="stylesheet"
       />
       <main className={styles.mainContent}>
-        <h1 className={styles.pageTitle}>Past Events</h1>
+        <h1 className={styles.pageTitle}>Past Ministering Events</h1>
 
         <section className={styles.eventsList}>
           <EventCard

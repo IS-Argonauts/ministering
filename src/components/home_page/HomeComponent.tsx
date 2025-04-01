@@ -1,70 +1,101 @@
 "use client";
+import { Link } from "react-router-dom";
+import MinistereeCard from "../ministeree_card/MinistereeCard";
+import MinisteringCompanionCard from "../ministering_companion_card/MinisteringCompanionCard";
 import styles from "./components.module.css";
 
 const HomeComponent = () => {
+
+  const user = {
+    firstName: "Larry",
+    lastName: "Smith",
+    phone: "801-555-1234",
+    address: "123 Main St, Provo, UT",
+    birthday: "January 1, 1990",
+    imageUrl: "src/images/stockPhoto1.jpg",
+  };
+
+
   return (
     <div className={styles.container}>
       <main className={styles.mainContent}>
-        <h1 className={styles.pageTitle}>Welcome</h1>
+        <h1 className={styles.pageTitle}>Welcome, { user.firstName }</h1>
 
         {/* Reminders Section */}
         <section className={styles.reminders}>
           <h2>Reminders</h2>
           <ul>
-            <li>
-              Jane Ludwig has a Birthday next week. Click <a href="#">here</a>{" "}
-              for ideas.
-            </li>
-            <li>You haven’t visited Keith in 12 days</li>
+          <li>
+            Jane Ludwig has a birthday soon! See the{" "}
+            <Link
+              to="/IdeaGenerator"
+              style={{
+                display: "inline-block",
+                padding: "4px 10px",
+                backgroundColor: "#007bff",
+                color: "white",
+                borderRadius: "4px",
+                textDecoration: "none",
+                fontWeight: "bold"
+              }}
+            >
+              Idea Generator
+            </Link>{" "}
+            for ideas.
+          </li>
+          <li>
+            You haven’t visited Keith in{" "}
+            <span
+              style={{
+                display: "inline-block",
+                backgroundColor: "#FFA500", // Orange
+                color: "black",
+                padding: "2px 6px",
+                borderRadius: "4px",
+                fontWeight: "bold"
+              }}
+            >
+              12
+            </span>{" "}
+            days
+          </li>
           </ul>
         </section>
 
         {/* Ministering Companion */}
         <section className={styles.assignmentSection}>
-          <h2>Ministering Companion</h2>
+          <h2 style={{ textAlign: "center" }}>Ministering Companion</h2>
           <div className={styles.cardScroll}>
-            <div className={styles.card}>
-              <img src="src/images/steve.jpg" alt="Steve Harvey" />
-              <h3>Steve Harvey</h3>
-              <p>Contact: 801-000-0000</p>
-              <p>Address: W310 TNRB, Provo, UT</p>
-              <p>Birthday: January 17, 1957</p>
-            </div>
+            <MinisteringCompanionCard
+              name="Steve Boyd"
+              phone="801-000-0000"
+              address="W310 TNRB, Provo, UT"
+              birthday="January 17, 1957"
+              imageUrl="src\assets\RandomMan.jpg"
+            />
           </div>
         </section>
 
         {/* Ministerees */}
         <section className={styles.assignmentSection}>
-          <h2>Ministerees</h2>
-          <div className={styles.cardScroll}>
-            <div className={styles.card}>
-              <img src="src/images/stockphoto2.jpg" alt="Keith Carney" />
-              <h3>Keith Carney</h3>
-              <p>Contact: 801-555-1111</p>
-              <p>Address: 101 Campus Dr, Provo, UT</p>
-              <p>Birthday: March 27, 1995</p>
+          <h2 style={{ textAlign: "center" }}>Assigned To:</h2>
+            <div className={styles.cardScroll}>
+              <MinistereeCard
+                name="Keith Carney"
+                phone="801-555-1111"
+                address="101 Campus Dr, Provo, UT"
+                birthday="March 27, 1995"
+                imageUrl="src/images/stockphoto2.jpg"
+              />
+              <MinistereeCard
+                name="Jane Ludwig"
+                phone="801-555-2222"
+                address="102 Campus Dr, Provo, UT"
+                birthday="January 27, 1995"
+                imageUrl="src/images/stockPhoto1.jpg"
+              />
             </div>
-
-            <div className={styles.card}>
-              <img src="src/images/stockPhoto1.jpg" alt="Jane Ludwig" />
-              <h3>Jane Ludwig</h3>
-              <p>Contact: 801-555-2222</p>
-              <p>Address: 102 Campus Dr, Provo, UT</p>
-              <p>Birthday: January 27, 1995</p>
-            </div>
-          </div>
         </section>
-
-        {/* Action Buttons */}
-        <div className={styles.actions}>
-          <div className={styles.actionCard}>
-            <p>Recently visited this member? Log your progress now.</p>
-            <button className={styles.iconButton}>📝</button>
-          </div>
-          <div className={styles.actionCard}>
-            <p>Know someone in need? Submit a Ward Service Request.</p>
-          </div>
-        </div>
       </main>
     </div>
   );
