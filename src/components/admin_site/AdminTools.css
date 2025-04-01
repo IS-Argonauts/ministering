@@ -1,29 +1,71 @@
 body {
-  padding-top: 0px; /* Pushes the content down, preventing overlap with the header */
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
 }
 
+main {
+  padding: 60px 16px 32px;
+  box-sizing: border-box;
+}
+
+/* Flexible grid with auto-adjusting columns */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Three columns */
-  gap: 10px; /* Space between items */
-  padding: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
 }
 
+/* Grid item styling */
 .grid-item {
   display: flex;
-  flex-direction: column; /* Stack the image and name vertically */
-  align-items: center; /* Center align the items */
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 12px;
 }
 
+/* Responsive image styling */
 .image {
-  width: 100%; /* Ensure the image scales properly */
-  height: auto; /* Maintain aspect ratio */
-  max-width: 200px; /* Limit the image width to prevent it from becoming too large */
+  width: 100%;
+  max-width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
+/* Text below images */
 .name {
   text-align: center;
   font-size: 16px;
   color: #333;
-  margin-top: 8px;
+  margin-top: 10px;
+}
+
+/* Responsive headings */
+h1, h2 {
+  text-align: left;
+  margin: 20px 0 10px;
+}
+
+/* Optional: Remove horizontal scrollbar caused by fixed header or padding issues */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto; /* Key to allow vertical scroll */
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Optional: improve mobile spacing */
+@media (max-width: 480px) {
+  main {
+    padding: 80px 16px 32px;
+    box-sizing: border-box;
+    min-height: 100vh; /* Ensures it stretches */
+  }
 }
