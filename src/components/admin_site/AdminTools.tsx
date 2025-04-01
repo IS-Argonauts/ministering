@@ -3,7 +3,7 @@ import Larry from "../../images/stockphoto2.jpg";
 import Steve from "../../images/stockPhoto1.jpg";
 import Jaden from "../../images/stockphoto2.jpg";
 import Keith from "../../images/stockphoto2.jpg";
-import Jane from "../../images/stockphoto2.jpg";
+import Jane from "../../images/stockPhoto1.jpg";
 
 function AdminTools() {
   return (
@@ -34,19 +34,16 @@ function AdminTools() {
             <p className="name">Jane Ludwig</p> {/* Name under the image */}
           </div>
         </div>
+        <br/>
         <h2>Companionship</h2>
         <div className="grid-container">
           <div className="grid-item">
             <img src={Keith} alt="Bryli" className="image" />
-            <p className="name">Bryli</p> {/* Name under the image */}
+            <p className="name">Russ Parker</p> {/* Name under the image */}
           </div>
           <div className="grid-item">
             <img src={Keith} alt="Dieter" className="image" />
-            <p className="name">Dieter</p> {/* Name under the image */}
-          </div>
-          <div className="grid-item">
-            <img src={Jaden} alt="Jaden" className="image" />
-            <p className="name">Jaden</p> {/* Name under the image */}
+            <p className="name">Hayden Cluff</p> {/* Name under the image */}
           </div>
         </div>
 
@@ -54,15 +51,15 @@ function AdminTools() {
         <div className="grid-container">
           <div className="grid-item">
             <img src={Keith} alt="Bryli" className="image" />
-            <p className="name">Bryli</p> {/* Name under the image */}
+            <p className="name">Brynlie Knolls</p> {/* Name under the image */}
           </div>
           <div className="grid-item">
             <img src={Keith} alt="Dieter" className="image" />
-            <p className="name">Dieter</p> {/* Name under the image */}
+            <p className="name">Sadie Poff</p> {/* Name under the image */}
           </div>
           <div className="grid-item">
             <img src={Jaden} alt="Jaden" className="image" />
-            <p className="name">Jaden</p> {/* Name under the image */}
+            <p className="name">Alexander Hedges</p> {/* Name under the image */}
           </div>
         </div>
       </main>
