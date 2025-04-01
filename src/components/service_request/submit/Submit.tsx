@@ -9,6 +9,7 @@ export default function Submit() {
       <br />
       <br />
       <br />
+      <br />
       <h1>Your request has been submitted!</h1>
       <div className={styles.submitContainer}>
         <button
