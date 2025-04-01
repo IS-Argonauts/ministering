@@ -268,4 +268,34 @@ a {
   transform: translateX(20px);
 }
 
+/* Mobile Menu Link Styling */
+@media (max-width: 48em) {
+  .header .menu li {
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .header .menu li:first-child {
+    border-top: none; /* Prevent double top border */
+  }
+
+  .header .menu li:last-child {
+    border-bottom: none; /* Prevent double bottom border */
+  }
+
+  .header .menu li a {
+    padding: 16px 20px;
+    text-align: center;
+    color: #fff;
+    background-color: #006184;
+    transition: background-color 0.2s;
+  }
+
+  .header .menu li a:hover {
+    background-color: #00506a;
+    color: #ffffff;
+  }
+}
+
+
 /* end navigation styling */
