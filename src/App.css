@@ -68,7 +68,8 @@ a {
 
 .header li a:hover,
 .header .menu-btn:hover {
-  background-color: #f4f4f4;
+  background-color: #00506a;
+  color: #ffffff;
 }
 
 .header .logo {
@@ -166,6 +167,7 @@ a {
     float: left;
     max-height: none;
     background-color: #006184;
+    color: #fff;
   }
   .header .menu-icon {
     display: none;
