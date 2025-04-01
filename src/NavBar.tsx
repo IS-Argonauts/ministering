@@ -36,6 +36,9 @@ function NavBar({ setIsAuthenticated }: NavBarProps) {
       <label className="menu-icon" htmlFor="menu-btn">
         <span className="navicon"></span>
       </label>
+      <label className="home-icon" htmlFor="home-btn">
+        <span className="navicon"></span>
+      </label>
 
       <ul className="menu">
         <li>

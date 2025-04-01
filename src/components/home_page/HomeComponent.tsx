@@ -1,9 +1,35 @@
 "use client";
+<<<<<<< Updated upstream
 import MinisterAssignmentCard from "../minister-assignment-card/MinisterAssignmentCard";
+=======
+import { Link, useNavigate } from "react-router-dom";
+import MinistereeCard from "../ministeree_card/MinistereeCard";
+import MinisteringCompanionCard from "../ministering_companion_card/MinisteringCompanionCard";
+>>>>>>> Stashed changes
 import styles from "./components.module.css";
 
 
 const HomeComponent = () => {
+<<<<<<< Updated upstream
+=======
+
+  const navigate = useNavigate();
+
+  const handleNavigation = (path: string) => {
+    navigate(path);
+  };
+
+  const user = {
+    firstName: "Larry",
+    lastName: "Smith",
+    phone: "801-555-1234",
+    address: "123 Main St, Provo, UT",
+    birthday: "January 1, 1990",
+    imageUrl: "src/images/stockPhoto1.jpg",
+  };
+
+
+>>>>>>> Stashed changes
   return (
     <div className={styles.container}>
       <main className={styles.mainContent}>
@@ -22,9 +48,15 @@ const HomeComponent = () => {
 
         {/* Ministering Companion */}
         <section className={styles.assignmentSection}>
+<<<<<<< Updated upstream
           <h2>Ministering Companion</h2>
           <div className={styles.cardScroll}>
             <MinisterAssignmentCard
+=======
+          <h2 style={{ textAlign: "center" }}>Ministering Companion</h2>
+          <div className={styles.cardScroll} onClick={() => handleNavigation("/profile/5")}>
+            <MinisteringCompanionCard
+>>>>>>> Stashed changes
               name="Steve Boyd"
               contact="801-000-0000"
               address="W310 TNRB, Provo, UT"
