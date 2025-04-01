@@ -1,10 +1,11 @@
 /* 🌟 Ensure full height & background */
 .container {
-  min-height: 100vh; /* Fix height issue */
-  background-color: #fff;
-  font-family: "Inter", sans-serif;
   display: flex;
   flex-direction: column;
+  height: 100vh; /* locks to viewport */
+  background-color: #fff;
+  font-family: "Inter", sans-serif;
+  overflow: hidden; /* ✅ prevent double scrollbars */
 }
 
 /* 🌟 HEADER STYLING */
@@ -13,7 +14,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 64px;
+  height: 32px;
   padding: 0 1rem;
   width: 100%;
 }
@@ -74,9 +75,11 @@
 /* 🌟 MAIN CONTENT STYLING */
 .mainContent {
   padding: 1.5rem;
+  padding-bottom: 6rem; /* 👈 Add extra space at bottom */
   flex: 1;
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
 }
 
 /* Title for Past Events */
@@ -95,15 +98,17 @@
 }
 
 /* 🌟 EVENT CARD STYLING */
-/* 🌟 EVENT CARD STYLING */
 .eventCard {
   display: flex;
-  align-items: flex-start; /* ✅ Aligns the image with the top of the text */
+  flex-direction: column; /* switch to column layout for stacked content */
   gap: 1rem;
   padding: 1rem;
   border-radius: 8px;
   background-color: #f9f9f9;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px; /* optional cap */
+  box-sizing: border-box;
 }
 
 /* Profile image container */
@@ -240,10 +245,11 @@
   border: 1px solid #ccc;
   font-family: "Inter", sans-serif;
 }
-.container {
+
+.formContainer {
+  width: 100%; /* 👈 prevents horizontal overflow */
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  height: 100vh; /* Full viewport height */
-  background-color: #fff;
-  font-family: "Inter", sans-serif;
+  gap: 0.5rem;
 }

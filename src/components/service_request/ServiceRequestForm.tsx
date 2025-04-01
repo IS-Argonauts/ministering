@@ -3,17 +3,25 @@
 import { useState } from "react";
 import { InputField } from "./InputField";
 import styles from "./ServiceRequestForm.module.css";
-import { FaUser, FaBars } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+import { DateInput } from "./DateInput";
 
 export const ServiceRequestForm = () => {
   const [isCoordinationRequired, setIsCoordinationRequired] = useState(false);
 
+  const navigate = useNavigate(); // ✅
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault(); // Prevent page refresh
+    navigate("/submit");
+  };
   return (
     <div className={styles.container}>
       {/* Header Section */}
+      <h2>Service Request</h2>
 
       {/* Form Section */}
-      <form className={styles.form}>
+      <form className={styles.form} onSubmit={handleSubmit}>
         <div className={styles.checkboxContainer}>
           <label className={styles.checkboxWrapper}>
             <input
@@ -37,11 +45,7 @@ export const ServiceRequestForm = () => {
           description="Include if receiver should be contacted"
         />
 
-        <InputField
-          label="Suggested date"
-          type="text"
-          placeholder="Select Date"
-        />
+        <DateInput />
 
         <div className={styles.submitContainer}>
           <button type="submit" className={styles.submitButton}>

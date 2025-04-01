@@ -1,0 +1,18 @@
+.card {
+    background-color: #e9f5ff;
+    border-radius: 8px;
+    padding: 1rem;
+    min-width: 250px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+  }
+  
