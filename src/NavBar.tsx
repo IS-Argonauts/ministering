@@ -39,27 +39,32 @@ function NavBar({ setIsAuthenticated }: NavBarProps) {
 
       <ul className="menu">
         <li>
-          <a href="#" onClick={() => handleNavigation("/Home")}>
+          <a onClick={() => handleNavigation("/Home")}>
             Home
           </a>
         </li>
         <li>
-          <a href="#" onClick={() => handleNavigation("/IdeaGenerator")}>
+          <a onClick={() => handleNavigation("/IdeaGenerator")}>
             Idea Generator
           </a>
         </li>
         <li>
-          <a href="#" onClick={() => handleNavigation("/ServiceRequest")}>
+          <a onClick={() => handleNavigation("/ServiceRequest")}>
             Service Request
           </a>
         </li>
         <li>
-          <a href="#" onClick={() => handleNavigation("/PastEvents")}>
+          <a onClick={() => handleNavigation("/PastEvents")}>
             Past Events
           </a>
         </li>
         <li>
-          <a href="#" onClick={() => handleNavigation("/Admin")}>
+          <a onClick={() => handleNavigation("/directory")}>
+            Local Directory
+          </a>
+        </li>
+        <li>
+          <a onClick={() => handleNavigation("/Admin")}>
             Admin
           </a>
         </li>

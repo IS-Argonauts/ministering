@@ -10,6 +10,7 @@ import ServiceRequest from "./pages/ServiceRequest";
 import Directory from "./pages/Directory";
 import SavedIdeasPage from "./pages/SavedIdeasPage";
 import Login from "./pages/Login";
+import Profile from "./components/directory/Profile";
 import Submit from "./components/service_request/submit/Submit";
 
 function App() {
@@ -78,6 +79,7 @@ function App() {
             <Route path="/SavedIdeas" element={<SavedIdeasPage />} />
             <Route path="/submit" element={<Submit />} />
             <Route path="/Directory" element={<Directory />} />
+            <Route path="/profile/:id" element={<Profile />} />
           </>
         )}
       </Routes>
