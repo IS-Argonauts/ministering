@@ -25,10 +25,19 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  padding: 0;
   min-width: 320px;
   min-height: 100vh;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: #f8f9fa;
 }
 
 h1 {
@@ -69,13 +78,15 @@ button:focus-visible {
 }
 
 /* Ensure full height & remove margins */
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100%;
+
   background-color: #f8f9fa; /* Optional: Light gray background */
 }
-
-

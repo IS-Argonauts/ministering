@@ -1,5 +1,6 @@
 /* DirectorySearch.css */
 .container {
+  margin-top: 80px; /* Top padding added */
   padding: 20px;
   font-family: "Inter", sans-serif;
   width: 90%;
