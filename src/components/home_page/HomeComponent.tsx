@@ -24,8 +24,8 @@ const HomeComponent = () => {
           <h2>Ministering Companion</h2>
           <div className={styles.cardScroll}>
             <div className={styles.card}>
-              <img src="src/images/steve.jpg" alt="Steve Harvey" />
-              <h3>Steve Harvey</h3>
+              <img src="src/images/Steve.jpeg" alt="Steve Boyd" />
+              <h3>Steve Boyd</h3>
               <p>Contact: 801-000-0000</p>
               <p>Address: W310 TNRB, Provo, UT</p>
               <p>Birthday: January 17, 1957</p>

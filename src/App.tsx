@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import { AdminTools } from "./components/admin_site/AdminTools";
+// import { AdminTools } from "./components/admin_site/AdminTools";
 import NavBar from "./NavBar";
 import Home from "./pages/Home";
 import IdeaGenerator from "./pages/IdeaGenerator";
@@ -9,6 +9,7 @@ import PastEvents from "./pages/PastEvents";
 import ServiceRequest from "./pages/ServiceRequest";
 import Directory from "./pages/Directory";
 import SavedIdeasPage from "./pages/SavedIdeasPage";
+import MemberProfile from "./components/member_page/MemberProfileLarry";
 import { useState } from "react";
 
 function App() {
@@ -27,8 +28,10 @@ function App() {
         <Route path="/PastEvents" element={<PastEvents />} />
         <Route path="/SavedIdeas" element={<SavedIdeasPage />} />
         <Route path="/Directory" element={<Directory />} />
+        <Route path='/MemberProfile' element={<MemberProfile />} />
 
       </Routes>
+      <MemberProfile/>
     </>
   );
 }
