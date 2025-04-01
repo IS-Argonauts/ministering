@@ -1,4 +1,5 @@
-import React, { useState } from "react"; // Add React useState hook
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
 import stockPhoto1 from "../../images/stockPhoto1.jpg";
 import lauraCutler from "../../images/lauraCutler.jpg";
@@ -7,16 +8,21 @@ import SearchResult from "./SearchResult";
 import "./DirectorySearch.css";
 
 const DirectorySearch: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState(""); // Step 1: Create state for the search query
+  const [searchQuery, setSearchQuery] = useState("");
+  const navigate = useNavigate();
 
   const results = [
     {
       id: 5,
       name: "Keith Carney",
-      image:
-        "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cG9ydHJhaXR8ZW58MHx8MHx8fDA%3D",
+      phone: "555-123-4567",
+      ministersTo: "Allen Rogers",
+      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&auto=format&fit=crop&q=60",
     },
-    { id: 3, name: "Laura Cutler", image: lauraCutler },
+    { 
+      id: 3, 
+      name: "Laura Cutler", 
+      image: lauraCutler },
     {
       id: 7,
       name: "Richard Ellis",
@@ -129,32 +135,38 @@ const DirectorySearch: React.FC = () => {
 
   // Step 2: Filter results based on the search query
   const filteredResults = results.filter(
-    (result) => result.name.toLowerCase().startsWith(searchQuery.toLowerCase()) // Check if the name starts with search query
+    (result) =>
+      result.name.toLowerCase().startsWith(searchQuery.toLowerCase())
   );
+
+  const handleSelect = (id: number) => {
+    navigate(`/profile/${id}`);
+  };
 
   return (
     <div className="container">
-      <br />
-      <br />
-      <br />
       <h1>Directory</h1>
       <div className="searchBar">
         <input
           type="text"
           placeholder="Search..."
           className="input"
-          value={searchQuery} // Step 3: Bind searchQuery to input
-          onChange={(e) => setSearchQuery(e.target.value)} // Step 4: Update the searchQuery when input changes
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
         />
         <FaSearch className="magnifier" />
       </div>
 
-      {/* Display filtered results */}
       <div className="resultsContainer">
         {filteredResults.map((result) => (
-          <a key={result.id} href="/Home" className="no-link-style">
+          <div
+            key={result.id}
+            className="no-link-style"
+            onClick={() => handleSelect(result.id)}
+            style={{ cursor: "pointer" }}
+          >
             <SearchResult name={result.name} image={result.image} />
-          </a>
+          </div>
         ))}
       </div>
     </div>

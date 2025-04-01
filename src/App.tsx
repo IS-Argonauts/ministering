@@ -10,6 +10,7 @@ import ServiceRequest from "./pages/ServiceRequest";
 import Directory from "./pages/Directory";
 import SavedIdeasPage from "./pages/SavedIdeasPage";
 import Login from "./pages/Login";
+import Profile from "./components/directory/Profile";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean | null>(null);
@@ -76,6 +77,7 @@ function App() {
             <Route path="/PastEvents" element={<PastEvents />} />
             <Route path="/SavedIdeas" element={<SavedIdeasPage />} />
             <Route path="/Directory" element={<Directory />} />
+            <Route path="/profile/:id" element={<Profile />} />
           </>
         )}
       </Routes>

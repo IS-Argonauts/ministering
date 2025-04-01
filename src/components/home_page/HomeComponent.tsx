@@ -71,7 +71,7 @@ const HomeComponent = () => {
               phone="801-000-0000"
               address="W310 TNRB, Provo, UT"
               birthday="January 17, 1957"
-              imageUrl="src\assets\LiftUpIcon.png"
+              imageUrl="src\assets\RandomMan.jpg"
             />
           </div>
         </section>

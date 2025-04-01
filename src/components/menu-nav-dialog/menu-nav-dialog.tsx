@@ -22,6 +22,9 @@ const DialogBox: React.FC<DialogBoxProps> = ({ open, onClose }) => {
           <ListItem component={Link} to="/contact" onClick={onClose}>
             <ListItemText primary="Contact" />
           </ListItem>
+          <ListItem component={Link} to="/directory" onClick={onClose}>
+            <ListItemText primary="Directory" />
+          </ListItem>
         </List>
       </DialogContent>
     </Dialog>
