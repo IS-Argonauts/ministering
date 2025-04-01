@@ -1,6 +1,10 @@
 import { Route, Routes } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "./App.css";
+<<<<<<< HEAD
+// import { AdminTools } from "./components/admin_site/AdminTools";
+=======
+>>>>>>> origin/dev
 import NavBar from "./NavBar";
 import Home from "./pages/Home";
 import IdeaGenerator from "./pages/IdeaGenerator";
@@ -9,8 +13,13 @@ import PastEvents from "./pages/PastEvents";
 import ServiceRequest from "./pages/ServiceRequest";
 import Directory from "./pages/Directory";
 import SavedIdeasPage from "./pages/SavedIdeasPage";
+<<<<<<< HEAD
+import MemberProfile from "./components/member_page/MemberProfileLarry";
+import { useState } from "react";
+=======
 import Login from "./pages/Login";
 import Submit from "./components/service_request/submit/Submit";
+>>>>>>> origin/dev
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean | null>(null);
@@ -61,7 +70,20 @@ function App() {
 
   return (
     <>
+<<<<<<< HEAD
+      <NavBar />
+      <Routes>
+        <Route path="/Home" element={<Home />} />
+        <Route path="/IdeaGenerator" element={<IdeaGenerator />} />
+        <Route path="/Admin" element={<Admin />} />
+        <Route path="/ServiceRequest" element={<ServiceRequest />} />
+        <Route path="/PastEvents" element={<PastEvents />} />
+        <Route path="/SavedIdeas" element={<SavedIdeasPage />} />
+        <Route path="/Directory" element={<Directory />} />
+        <Route path='/MemberProfile' element={<MemberProfile />} />
+=======
       {isAuthenticated && <NavBar setIsAuthenticated={setIsAuthenticated} />}
+>>>>>>> origin/dev
 
       <Routes>
         <Route
@@ -81,6 +103,7 @@ function App() {
           </>
         )}
       </Routes>
+      <MemberProfile/>
     </>
   );
 }
