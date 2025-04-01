@@ -21,6 +21,10 @@ const MinistereeCard = ({ name, phone, address, birthday, imageUrl }: Ministeree
     });
   };
 
+  const handlePastEventClick = () => {
+    navigate("/PastEvents")
+  };
+
   return (
     <div className={styles.card}>
       <img src={imageUrl} alt={name} className={styles.image} />
@@ -30,9 +34,9 @@ const MinistereeCard = ({ name, phone, address, birthday, imageUrl }: Ministeree
       <p>Birthday: {birthday}</p>
       <div className={styles.buttonGroup}>
         <button className={styles.button} onClick={handleServiceRequestClick}>
-          Service Request
+          Request Service for {`${name}`}
         </button>
-        <button className={styles.button}>Log Ministering Event</button>
+        <button className={styles.button} onClick={handlePastEventClick}>Log Ministering Event</button>
       </div>
     </div>
   );
