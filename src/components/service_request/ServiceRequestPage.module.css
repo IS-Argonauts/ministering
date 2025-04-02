@@ -1,11 +1,11 @@
+/* ========== Page Layout ========== */
 .page {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
   background-color: #fff;
   font-family: Inter, sans-serif;
-  padding: 1rem;
   box-sizing: border-box;
 }
 
@@ -15,6 +15,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: transparent;
+  color: white;
+  border-radius: 5px;
 }
 
 .headerContent {
@@ -26,56 +29,85 @@
 
 .main {
   flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
 }
 
+/* ========== Form Wrapper ========== */
 .formWrapper {
   background: #fdfdfd;
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
-  max-width: 600px;
-  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 
+/* ========== Form ========== */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 0;
+}
+
+/* ========== Heading ========== */
 .heading {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   font-size: 1.75rem;
   color: #333;
 }
 
+/* ========== Checkbox ========== */
 .checkboxContainer {
-  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
 }
 
 .checkboxWrapper {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  font-size: 1rem;
-  color: #444;
+  cursor: pointer;
 }
 
+.checkboxInput {
+  border: 2px solid #49454f;
+  border-radius: 2px;
+  width: 18px;
+  height: 18px;
+}
+
+.checkboxLabel {
+  font-size: 1rem;
+  color: #000;
+}
+
+/* ========== Submit Button ========== */
 .submitContainer {
   display: flex;
   justify-content: center;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 .submitButton {
-  background-color: #007bff;
+  background-color: #006184;
   color: white;
   border: none;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  border-radius: 6px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
 
 .submitButton:hover {
-  background-color: #0056b3;
+  background-color: #004d6a;
 }

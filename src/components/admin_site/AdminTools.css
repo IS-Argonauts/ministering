@@ -6,7 +6,10 @@ body {
 }
 
 main {
-  padding: 60px 16px 32px;
+  padding-top: 120px; /* Or whatever your navbar height is */
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 32px;
   box-sizing: border-box;
 }
 
