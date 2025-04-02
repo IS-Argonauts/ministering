@@ -43,10 +43,10 @@ a {
 }
 
 .header {
+  position: sticky;
+  top: 0;
   background-color: #006184;
   box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
-  position: fixed;
-  top: 0;
   width: 100%;
   z-index: 3;
 }
@@ -298,6 +298,18 @@ a {
     color: #ffffff;
   }
 }
+
+.navbar-wrapper {
+  position: relative;
+}
+
+.header {
+  width: 100%;
+  z-index: 3;
+  background-color: #006184;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
 
 
 /* end navigation styling */

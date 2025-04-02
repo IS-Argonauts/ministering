@@ -136,3 +136,35 @@ img {
     min-width: unset;
   }
 }
+
+.reminders {
+  background-color: #f1f5f9; /* light grayish-blue, easy on the eyes */
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.reminderCloseButton {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 1rem;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.reminderCloseButton:hover {
+  color: #444;
+}
+
+.daysHighlight {
+  display: inline-block;
+  background-color: #FFA500; /* Orange */
+  color: black;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: bold;
+}
