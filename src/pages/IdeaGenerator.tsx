@@ -7,7 +7,6 @@ export default function IdeaGenerator() {
 
   return (
     <div>
-      <NavBar setIsAuthenticated={setIsAuthenticated} />
       <IdeaGeneratorPage />
     </div>
   );
