@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import MinistereeCard from "../ministeree_card/MinistereeCard";
 import MinisteringCompanionCard from "../ministering_companion_card/MinisteringCompanionCard";
 import styles from "./components.module.css";
+import Reminders from "./Reminders";
 
 const HomeComponent = () => {
 
@@ -22,45 +23,7 @@ const HomeComponent = () => {
         <h1 className={styles.pageTitle}>Welcome, { user.firstName }</h1>
 
         {/* Reminders Section */}
-        <section className={styles.reminders}>
-          <h2>Reminders</h2>
-          <ul>
-          <li>
-            Jane Ludwig has a birthday soon! See the{" "}
-            <Link
-              to="/IdeaGenerator"
-              style={{
-                display: "inline-block",
-                padding: "4px 10px",
-                backgroundColor: "#007bff",
-                color: "white",
-                borderRadius: "4px",
-                textDecoration: "none",
-                fontWeight: "bold"
-              }}
-            >
-              Idea Generator
-            </Link>{" "}
-            for ideas.
-          </li>
-          <li>
-            You haven’t visited Keith in{" "}
-            <span
-              style={{
-                display: "inline-block",
-                backgroundColor: "#FFA500", // Orange
-                color: "black",
-                padding: "2px 6px",
-                borderRadius: "4px",
-                fontWeight: "bold"
-              }}
-            >
-              12
-            </span>{" "}
-            days
-          </li>
-          </ul>
-        </section>
+        <Reminders />
 
         {/* Ministering Companion */}
         <section className={styles.assignmentSection}>

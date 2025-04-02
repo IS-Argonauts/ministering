@@ -22,7 +22,7 @@ function Login({ setIsAuthenticated }: LoginProps) {
       const loginTime = Date.now();
       localStorage.setItem("isAuthenticated", "true"); // Store auth status in localStorage
       localStorage.setItem("loginTime", loginTime.toString()); // Store login time in localStorage
-      console.log("Login successful!");
+      localStorage.removeItem("remindersDismissed");
       console.log("Stored Auth:", localStorage.getItem("isAuthenticated"));
       console.log("Stored Login Time:", localStorage.getItem("loginTime"));
       setIsAuthenticated(true);

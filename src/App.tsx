@@ -12,13 +12,20 @@ import SavedIdeasPage from "./pages/SavedIdeasPage";
 import Login from "./pages/Login";
 import Profile from "./components/directory/Profile";
 import Submit from "./components/service_request/submit/Submit";
+import { useLocation } from 'react-router-dom';
+import ViewServiceRequestsPage from "./pages/ViewServiceRequestsPage";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean | null>(null);
 
+  const location = useLocation();
+  const isLoginPage = location.pathname === "/";
+
+
   // Function to log out the user
   const logout = () => {
     console.log("Logging out...");
+    localStorage.removeItem("remindersDismissed");
     localStorage.removeItem("isAuthenticated"); // Clear localStorage
     localStorage.removeItem("loginTime"); // Clear login time
     setIsAuthenticated(false); // Update state
@@ -62,7 +69,9 @@ function App() {
 
   return (
     <>
-      {isAuthenticated && <NavBar setIsAuthenticated={setIsAuthenticated} />}
+      {isAuthenticated && !isLoginPage && (
+        <NavBar setIsAuthenticated={setIsAuthenticated} />
+      )}
 
       <Routes>
         <Route
@@ -79,6 +88,7 @@ function App() {
             <Route path="/SavedIdeas" element={<SavedIdeasPage />} />
             <Route path="/submit" element={<Submit />} />
             <Route path="/Directory" element={<Directory />} />
+            <Route path="/ViewServiceRequests" element={<ViewServiceRequestsPage />} />
             <Route path="/profile/:id" element={<Profile />} />
           </>
         )}

@@ -8,53 +8,57 @@ import { DateInput } from "./DateInput";
 
 export const ServiceRequestForm = () => {
   const [isCoordinationRequired, setIsCoordinationRequired] = useState(false);
-
-  const navigate = useNavigate(); //
+  const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault(); // Prevent page refresh
+    e.preventDefault();
     navigate("/submit");
   };
+
   return (
-    <>
-      {/* Header Section */}
-      <h2>Service Request</h2>
-      <div className={styles.container}>
-        {/* Form Section */}
-        <form className={styles.form} onSubmit={handleSubmit}>
-          <div className={styles.checkboxContainer}>
-            <label className={styles.checkboxWrapper}>
-              <input
-                type="checkbox"
-                checked={isCoordinationRequired}
-                onChange={(e) => setIsCoordinationRequired(e.target.checked)}
-                className={styles.checkboxInput}
-              />
-              <span className={styles.checkboxLabel}>
-                Coordination (materials, access to location) required?
-              </span>
-            </label>
-          </div>
+    <div className={styles.formWrapper}>
+      <h2 className={styles.heading}>Service Request</h2>
 
-          <InputField label="Name of receiver" placeholder="Name" />
+      <form className={styles.form} onSubmit={handleSubmit}>
+        {/* Coordination checkbox */}
+        <div className={styles.checkboxContainer}>
+            <input
+              type="inputbox"
+              onChange={(e) => setIsCoordinationRequired(e.target.checked)}
+              className={styles.checkboxInput}
+            />
+          <label className={styles.checkboxWrapper}>
+            <input
+              type="checkbox"
+              checked={isCoordinationRequired}
+              onChange={(e) => setIsCoordinationRequired(e.target.checked)}
+              className={styles.checkboxInput}
+            />
+            <span className={styles.checkboxLabel}>
+              Coordination (materials, access to location) required?
+            </span>
+          </label>
+        </div>
 
-          <InputField
-            label="Phone number of receiver"
-            type="tel"
-            placeholder="Phone"
-            description="Include if receiver should be contacted"
-          />
+        {/* Input fields */}
+        <InputField label="Name of receiver" placeholder="Full name" />
+        <InputField
+          label="Phone number of receiver"
+          type="tel"
+          placeholder="(123) 456-7890"
+          description="Include if the receiver should be contacted"
+        />
+        <DateInput />
+        <InputField label="Service Request Details" placeholder="Coordinate dinners for the family" />
 
-          <DateInput />
-
-          <div className={styles.submitContainer}>
-            <button type="submit" className={styles.submitButton}>
-              Submit
-            </button>
-          </div>
-        </form>
-      </div>
-    </>
+        {/* Submit button */}
+        <div className={styles.submitContainer}>
+          <button type="submit" className={styles.submitButton}>
+            Submit Request
+          </button>
+        </div>
+      </form>
+    </div>
   );
 };
 
