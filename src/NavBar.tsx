@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import { FiUser, FiHome, FiCompass, FiUsers, FiUserPlus, FiClock, FiBookOpen } from "react-icons/fi";
+import {
+  FiUser,
+  FiHome,
+  FiCompass,
+  FiUsers,
+  FiUserPlus,
+  FiClock,
+  FiBookOpen,
+} from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 import "./App.css"; // Ensure your CSS file is imported
 
@@ -41,32 +49,32 @@ function NavBar({ setIsAuthenticated }: NavBarProps) {
         <ul className="menu">
           <li>
             <a onClick={() => handleNavigation("/Home")}>
-            <FiHome /> Home
+              <FiHome /> Home
             </a>
           </li>
           <li>
             <a onClick={() => handleNavigation("/IdeaGenerator")}>
-            <FiCompass /> Idea Generator
+              <FiCompass /> Idea Generator
             </a>
           </li>
           <li>
             <a onClick={() => handleNavigation("/ServiceRequest")}>
-            <FiUsers /> Service Request
+              <FiUsers /> Service Request
             </a>
           </li>
           <li>
             <a onClick={() => handleNavigation("/PastEvents")}>
-            <FiClock /> Past Events
+              <FiClock /> Past Events
             </a>
           </li>
           <li>
             <a onClick={() => handleNavigation("/directory")}>
-            <FiBookOpen /> Local Directory
+              <FiBookOpen /> Local Directory
             </a>
           </li>
           <li>
             <a onClick={() => handleNavigation("/Admin")}>
-            <FiUserPlus /> Admin
+              <FiUserPlus /> Admin
             </a>
           </li>
         </ul>

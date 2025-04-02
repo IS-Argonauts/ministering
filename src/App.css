@@ -300,7 +300,9 @@ a {
 }
 
 .navbar-wrapper {
-  position: relative;
+  position: fixed;
+  width: 100%;
+  z-index: 9999; /* Ensures it's above everything else */
 }
 
 .header {
@@ -309,7 +311,5 @@ a {
   background-color: #006184;
   box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
 }
-
-
 
 /* end navigation styling */
