@@ -22,11 +22,6 @@ export const ServiceRequestForm = () => {
       <form className={styles.form} onSubmit={handleSubmit}>
         {/* Coordination checkbox */}
         <div className={styles.checkboxContainer}>
-            <input
-              type="inputbox"
-              onChange={(e) => setIsCoordinationRequired(e.target.checked)}
-              className={styles.checkboxInput}
-            />
           <label className={styles.checkboxWrapper}>
             <input
               type="checkbox"
